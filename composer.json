@@ -1,0 +1,43 @@
+{
+  "name": "erhaweb/tt-address-extend",
+  "type": "typo3-cms-extension",
+  "description": "Example for the extension of the address model of the TYPO3 extension tt_address",
+  "license": "GPL-2.0-or-later",
+  "require": {
+    "typo3/minimal": "^12.0"
+  },
+  "authors": [
+    {
+      "name": "Eric Harrer",
+      "role": "Developer",
+      "email": "info@eric-harrer.de",
+      "homepage": "https://www.eric-harrer.de"
+    }
+  ],
+  "keywords": [
+    "Address",
+    "Extend"
+  ],
+  "support": {
+    "issues": "https://github.com/erhaweb/tt-address-extend/issues"
+  },
+  "homepage": "https://github.com/erhaweb/tt-address-extend/",
+  "require-dev": {
+    "roave/security-advisories": "dev-latest",
+    "typo3/cms-belog": "^12.0",
+    "typo3/cms-lowlevel": "^12.0",
+    "typo3/cms-scheduler": "^12.0",
+    "typo3/cms-setup": "^12.0"
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "tt_address_extend"
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "ErHaWeb\\TtAddressExtend\\": "Classes"
+    }
+  },
+  "prefer-stable": true
+}

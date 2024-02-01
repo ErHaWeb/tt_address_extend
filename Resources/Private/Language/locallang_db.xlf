@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns:t3="http://typo3.org/schemas/xliff" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" original="messages" datatype="plaintext" product-name="tt_address_extend" date="2024-02-01T08:18:10+01:00">
+        <header></header>
+        <body>
+            <trans-unit id="tt_address.my_custom_field.title" resname="tt_address.my_custom_field.title">
+                <source>My Custom tt_address field</source>
+            </trans-unit>
+            <trans-unit id="tt_address.my_custom_field.description" resname="tt_address.my_custom_field.description">
+                <source>This is the description of my custom field</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
