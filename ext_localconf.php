@@ -20,6 +20,9 @@ declare(strict_types=1);
 
 use ErHaWeb\TtAddressExtend\Domain\Model\Address;
 use FriendsOfTYPO3\TtAddress\Domain\Model\Address as OriginalAddress;
+use TYPO3\CMS\Core\Information\Typo3Version;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Extbase\Object\Container\Container;
 
 defined('TYPO3') or die();
 
@@ -27,4 +30,14 @@ defined('TYPO3') or die();
     $GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects'][OriginalAddress::class] = [
         'className' => Address::class,
     ];
+
+    $versionInformation = GeneralUtility::makeInstance(Typo3Version::class);
+
+    // Register extended registration class (TYPO3 9.5 - 11.5 only, not required for TYPO3 12)
+    if ($versionInformation->getMajorVersion() < 12) {
+        GeneralUtility::makeInstance(Container::class)->registerImplementation(
+            OriginalAddress::class,
+            Address::class
+        );
+    }
 })();
